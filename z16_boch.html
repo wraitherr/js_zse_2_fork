@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color: #F493FB;
+            display: flex;
+            justify-content: center;
+        }
+
+        #oblicz{
+            background-color: white;
+            text-align: center;
+            width: 1500px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.4s ease;
+            box-shadow: transform 0.4s ease;
+        }
+
+        input{
+            border-radius:  15px;
+        }
+
+        #oblicz:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px white;
+        }
+    </style>
+    </head>
+    
+    
+   <body>
+       <div style="color:#00008b;font-size:43px" id="oblicz">
+       <script language="JavaScript">
+           var a_boc=prompt("Podaj pierwszą liczbę                                 A=                                      Podaj drugą liczbę                                      B=","");
+           var b_boc=prompt("Podaj pierwszą liczbę                                 A=                                      Podaj drugą liczbę                                      B=","");
+           var trzya;
+           var tszyb;
+           trzya=a_boc*a_boc*a_boc;
+           dwaa=a_boc*a_boc;
+           tszyb=b_boc*b_boc*b_boc;
+           dwab=b_boc*b_boc;
+           suma=trzya+3*dwaa*b_boc+3*a_boc*dwab+tszyb;
+           document.write("("+a_boc+"+"+b_boc+")^3="+a_boc+"^3+3*(("+a_boc+")^2)+3*("+a_boc+")*(("+b_boc+")^2)+"+b_boc+"^3="+trzya+"+"+3*dwaa*b_boc+"+"+3*a_boc*dwab+"+"+tszyb+"="+suma);
+           //                                 a_boc^3   +  3*a_boc^2*b_boc  +  3*a_boc*b_boc^2 + b_boc^3
+        </script>
+       <br> 
+       </div>  
+       <br>
+       <br>
+       <br> 
+       <input type="button" name="zamknij" value="nic" onclick="window.close()">
+   </body>
+   </html>
+
+   <!-- Artem Bochkovskyi 2p 25.09.2025-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 5</title>
+  <link rel="stylesheet" href="z5.css">
+  <script>
+    function WinOpen_Boch(obraz, left) {
+      window.open(
+        `obraz${obraz}.html`,
+        `okienko_obraz${obraz}`,
+        `toolbar=no, directories=no, menubar=no, height=280, width=200, top=400, left=${left}`);
+    }
+  </script>
+</head>
+<body>
+  <h1>wykonał: Artem Bochkovskyi mój numer w dzienniku 3, czyli mam układ [(3) mod 4=0] układ 4</h1>
+  <div class="buttons">
+    <button onclick=" WinOpen_Boch(1, 500)">grafika1</button>
+    <button onclick=" WinOpen_Boch(2, 720)">grafika2</button>
+    <button onclick=" WinOpen_Boch(3, 940)">grafika3</button>
+    <button onclick=" WinOpen_Boch(4, 1160)">grafika4</button>
+  </div>
+  
+  <input 
+    type="button" 
+    value="zamknij okno" 
+    onclick="window.close()"
+    class="close-button"
+  >
+</body>
+</html>
