@@ -39,6 +39,7 @@ p:hover{
     height: 100px;
     box-shadow: 0 4px 6px rgb(81, 255, 0);
     transition: 0.5s;
+    cursor: pointer;
 }
 #monster:hover{
     transform: scale(1.05);
