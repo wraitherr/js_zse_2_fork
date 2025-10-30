@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="pl">
+            <head>
+                <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Zadanie 27</title>
+            </head>
+        <body>
+                <script>
+                    let odl_boc=parseFloat(prompt("Podaj odległość między Arturem a Dawidem"))
+                        let s_boc=parseFloat(prompt("Podaj jaką odległość samolot przeleciał"))
+                                document.write("Odległość " + odl_boc + " km <br>")
+                                    document.write("Samolot przeleciał " + s_boc + " km <br><br>")
+                                        if (s_boc <= odl_boc) {
+                                            document.write("Błąd: odległość nie może być większa lub równa długości lotu.<br>");
+                                        } 
+                                        else{
+                                            wysokoscSamolotu_boc(s_boc, odl_boc)
+                                            kat_boc(s_boc,odl_boc)
+                                        }
+                                    function wysokoscSamolotu_boc(s, odl){
+                                let wysokosc_boc = Math.sqrt(Math.pow(s, 2) - Math.pow(odl, 2));
+                            document.write("Wysokość samolota, gdy pionowo znajduje się nad Dawidem " + wysokosc_boc.toFixed(2) +" km <br>");
+                        }
+                                    function kat_boc(s, odl){
+                                        let katRadiany_boc = Math.acos(odl / s); 
+                                            let katStopni_boc = (katRadiany_boc * 180) / Math.PI;
+                                        document.write("Kąt startu samolotu " + katStopni_boc.toFixed(2) +" stopni");   
+                                    }
+                </script>
+        </body>
+</html>
