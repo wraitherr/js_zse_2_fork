@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Zadanie 22</title>
+            </head>
+        <body>
+            <script>
+                function pole_boc() {
+                    let a_dane_boc = parseFloat(document.getElementById('a_dane_boc').value);
+                        let b_dane_boc = parseFloat(document.getElementById('b_dane_boc').value);
+                            let wynik_boc = a_dane_boc * b_dane_boc;
+                        document.getElementsByName('pole')[0].value = wynik_boc.toFixed(2) + " cm^2";
+                    document.getElementById('wyprowadz_pole_boc').innerHTML = "Pole prostokątu   " + wynik_boc.toFixed(2) + " cm^2";
+                }
+
+                function obwod_boc() {
+                    let a_dane_boc = parseFloat(document.getElementById('a_dane_boc').value);
+                        let b_dane_boc = parseFloat(document.getElementById('b_dane_boc').value);
+                            let wynik_boc = 2*(a_dane_boc + b_dane_boc);
+                        document.getElementsByName('obw')[0].value = wynik_boc.toFixed(2) + " cm";
+                    document.getElementById('wyprowadz_obw_boc').innerHTML = "Obwód prostokątu  " + wynik_boc.toFixed(2) + " cm";
+                }
+            </script>
+
+    <h1>Wszystko o prostokącie</h1>
+
+        Podaj długość boku A: <input type="text" id="a_dane_boc" value=""> cm<br><br>
+        Podaj długość boku B: <input type="text" id="b_dane_boc" value=""> cm<br><br>
+            <input type="button" value="Oblicz" onclick="pole_boc() &obwod_boc()"><br><br>
+        Pole prostokątu:   <input type="text" name="pole" readonly><br><br>
+        Obwód prostokątu: <input type="text" name="obw" readonly><br> <br><br>
+            <table style="color: red; font-size: 30px;">
+                <tr id="wyprowadz_pole_boc"></tr>
+                <tr id="wyprowadz_obw_boc"></tr>
+            </table>
+
+        </body>
+    </html>
+    <!-- Artem Bochkovskyi 2P-->

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .punkt{
+            width: 15px;
+        }
+        body{
+            background-color: silver;
+        }
+        textarea{
+            background-color: lightyellow;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod zadanie 20</title>
+</head>
+<body>
+    <textarea name="" id="" cols="100" rows="60">
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+         <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Zadanie 20</title>
+
+                    <style>
+                          .punkt{
+                               width: 15px;
+                          }
+        </style>
+    </head>
+<body>
+        <script>
+        
+             function AB_boc(){
+                let xA_boc=parseFloat(document.getElementById('xA_boc').value);
+                let yA_boc=parseFloat(document.getElementById('yA_boc').value);
+                let xB_boc=parseFloat(document.getElementById('xB_boc').value);
+                let yB_boc=parseFloat(document.getElementById('yB_boc').value);
+                let wynik_boc= Math.sqrt(Math.pow((xA_boc-xB_boc),2) + Math.pow((yA_boc-yB_boc),2));
+                document.getElementById('wynikAB_boc').innerHTML="Długość boku AB = " + wynik_boc.toFixed(2) + "";}
+
+            function BC_boc(){
+                let xA_boc=parseFloat(document.getElementById('xB_boc').value);
+                let yA_boc=parseFloat(document.getElementById('yB_boc').value);
+                let xB_boc=parseFloat(document.getElementById('xC_boc').value);
+                let yB_boc=parseFloat(document.getElementById('yC_boc').value);
+                let wynik_boc= Math.sqrt(Math.pow(xA_boc-xB_boc,2) + Math.pow(yA_boc-yB_boc,2));
+                document.getElementById('wynikBC_boc').innerHTML="Długość boku BC = " + wynik_boc.toFixed(2) + "";}
+
+            function CA_boc(){
+                let xA_boc=parseFloat(document.getElementById('xC_boc').value);
+                let yA_boc=parseFloat(document.getElementById('yC_boc').value);
+                let xB_boc=parseFloat(document.getElementById('xA_boc').value);
+                let yB_boc=parseFloat(document.getElementById('yA_boc').value);
+                let wynik_boc= Math.sqrt(Math.pow(xA_boc-xB_boc,2) + Math.pow(yA_boc-yB_boc,2));
+                document.getElementById('wynikCA_boc').innerHTML="Długość boku CA = " + wynik_boc.toFixed(2) + "";}
+        
+        </script>  
+Podaj punkt A: x <input type="text"id="xA_boc"value=""class="punkt">y<input type="text"id="yA_boc"value=""class="punkt"> <br><br>
+Podaj punkt B: x <input type="text"id="xB_boc"value=""class="punkt">y<input type="text"id="yB_boc"value=""class="punkt"> <br><br>
+Podaj punkt C: x <input type="text"id="xC_boc"value=""class="punkt">y<input type="text"id="yC_boc"value=""class="punkt"> <br><br>
+    <input type="button" id="oblicz_boc" value="Oblicz długości" onclick="AB_boc() &BC_boc() &CA_boc()">
+    <div id="wynikAB_boc" style="color:red;font-size:50px;"></div>
+    <div id="wynikBC_boc" style="color:red;font-size:50px;"></div>
+    <div id="wynikCA_boc" style="color:red;font-size:50px;"></div>
+</body>
+</html>
+
+<!-- Artem Bochkovskyi 2P-->
+    </textarea>
+</body>
+</html>

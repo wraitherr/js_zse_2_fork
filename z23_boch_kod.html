@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        textarea{
+            font-family: monospace;
+            background-color: lightyellow;
+        }
+        body{
+            background-color: silver;
+        }
+
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod zadanie 23</title>
+</head>
+<body>
+    <textarea name="" id="" cols="100" rows="50">
+<!DOCTYPE html>
+        <html lang="pl">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Zadanie 23</title>
+
+    <style>
+        input[type="text"]{
+            width: 30px;
+        }
+        input[type="text"]:last-of-type{
+            width: 50px;
+        }
+    </style>
+            </head>
+                    <body>
+                        <script>
+                            function dlugosc_boc(d_boc, x_boc){
+                                let dlugosc_boc = Math.sqrt(Math.pow(d_boc, 2) + Math.pow(x_boc, 2));
+                            document.getElementById('dlugosc').value = dlugosc_boc.toFixed(2);
+                            }
+
+                            function alfa_boc(d_boc, x_boc){
+                                let alfaRadiany_boc = Math.atan(d_boc / x_boc);
+                                let alfaStopni_boc = (alfaRadiany_boc * 180) / Math.PI;
+                            document.getElementById('alfa').value = alfaStopni_boc.toFixed(2);
+                            }
+
+                            function oblicz(){
+                                    let d_boc = parseFloat(document.getElementById('d_boc').value);
+                                        let x_boc = parseFloat(document.getElementById('x_boc').value);
+                                    dlugosc_boc(d_boc, x_boc);
+                                alfa_boc(d_boc, x_boc);
+                            }
+                        </script>
+
+    <h1>Obliczenie kąta nachylenia i długości drabiny</h1>
+    Podaj D-wysokość oparcia drabiny: <input type="text" id="d_boc"> <br><br>
+    Podaj X-odległość oparcia drabiny: <input type="text" id="x_boc"> <br><br>
+    <input type="button" value="Oblicz" onclick="oblicz()"> <br><br>
+    Długość drabiny <input type="text" id="dlugosc">
+    Kąt nachylenia drabiny <input type="text" id="alfa">
+</body>
+</html>
+    </textarea>
+</body>
+</html>

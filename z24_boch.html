@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="pl">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Zadanie 24</title>
+        </head>
+    <body>
+        <script>
+            let x1_boc=parseFloat(prompt('Podaj liczbę x1'))
+                let x2_boc=parseFloat(prompt('Podaj liczbę x2'))
+                    const liczbaLiterImienia_boc=6;
+                        const l_boc=parseFloat(liczbaLiterImienia_boc);
+                            let x1Stopni_boc=x1_boc;
+                                let x1Radiany_boc=(x1Stopni_boc*Math.PI)/180;
+                                    let y1_boc=3*Math.pow(x1_boc,(l_boc/(l_boc+2)))
+                                        let y2_boc=2*Math.cos(x1Radiany_boc) + 3*Math.sin(x1Radiany_boc);
+                                let y3_boc=Math.cbrt(Math.pow(x1_boc,5)+2*Math.pow(x2_boc,4),3)*Math.abs(x1_boc-x2_boc);
+                            document.write("x1 = " + x1_boc + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x2 = " + x2_boc + "<br>")
+                        document.write("x1 = " + x1Stopni_boc + "[stopni]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x1 = " + x1Radiany_boc.toFixed(2) + "[radiany] <br><br>")
+                    document.write("y1 = " + y1_boc.toFixed(2) + "<br>")
+                document.write("y2 = " + y2_boc.toFixed(2) + "<br>")
+            document.write("y3 = " + y3_boc.toFixed(2) + "<br>")
+        </script>
+    </body>
+</html>
