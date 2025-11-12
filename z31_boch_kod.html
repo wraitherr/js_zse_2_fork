@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+  <title> proste obliczenia</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea readonly>
+   <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiekt Autobus</title>
+</head>
+<body>
+    <script>
+       
+        function Autobus(_ilu_pasazerow, _marka, _kolor) {
+            this.ilu_pasazerow = _ilu_pasazerow;
+            this.marka = _marka;
+            this.kolor = _kolor;
+
+         
+            this.Autobus_wyswietl_bochkovskyi = function() {
+                document.write(`Autobus marki ${this.marka} ma kolor ${this.kolor} i może przewozić ${this.ilu_pasazerow} pasażerów.`);
+            }
+        }
+
+       
+        let autobus1 = new Autobus(50, "Audi", "czerwony");
+        autobus1.Autobus_wyswietl_bochkovskyi();
+
+       
+        autobus1.ocena = 4.8;
+
+     
+        autobus1.autobus_pokaz_bochkovskyi = function() {
+            document.write(`<br>Autobus jest oceniany na ${this.ocena} gwiazdek/gwiazdki.`);
+        }
+
+   
+        autobus1.autobus_pokaz_bochkovskyi();
+    </script>
+</body>
+</html>
+    
+    </textarea>
+</body>
+
+</html>
