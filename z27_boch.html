@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-    <html lang="pl">
-            <head>
-                <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Zadanie 27</title>
-            </head>
-        <body>
-                <script>
-                    let odl_boc=parseFloat(prompt("Podaj odległość między Arturem a Dawidem"))
-                        let s_boc=parseFloat(prompt("Podaj jaką odległość samolot przeleciał"))
-                                document.write("Odległość " + odl_boc + " km <br>")
-                                    document.write("Samolot przeleciał " + s_boc + " km <br><br>")
-                                        if (s_boc <= odl_boc) {
-                                            document.write("Błąd: odległość nie może być większa lub równa długości lotu.<br>");
-                                        } 
-                                        else{
-                                            wysokoscSamolotu_boc(s_boc, odl_boc)
-                                            kat_boc(s_boc,odl_boc)
-                                        }
-                                    function wysokoscSamolotu_boc(s, odl){
-                                let wysokosc_boc = Math.sqrt(Math.pow(s, 2) - Math.pow(odl, 2));
-                            document.write("Wysokość samolota, gdy pionowo znajduje się nad Dawidem " + wysokosc_boc.toFixed(2) +" km <br>");
-                        }
-                                    function kat_boc(s, odl){
-                                        let katRadiany_boc = Math.acos(odl / s); 
-                                            let katStopni_boc = (katRadiany_boc * 180) / Math.PI;
-                                        document.write("Kąt startu samolotu " + katStopni_boc.toFixed(2) +" stopni");   
-                                    }
-                </script>
-        </body>
+<html>
+<head>
+<title>Zadanie 27</title>
+<script language="JavaScript">
+function wysokosc(odl, s) {
+ odl = parseFloat(odl);
+ s = parseFloat(s);
+ let h = Math.sqrt(s * s - odl * odl);
+ document.getElementsByName('wysokosc')[0].value = h.toFixed(2);
+ pokaz1.innerHTML = "h = " + h.toFixed(2);
+}
+
+function kat(odl, s) {
+ odl = parseFloat(odl);
+ s = parseFloat(s);
+ let kat_rad = Math.asin(odl / s);
+ let kat_deg = kat_rad * (180 / Math.PI);
+ document.getElementsByName('kat')[0].value = kat_deg.toFixed(2);
+ pokaz2.innerHTML = "kąt = " + kat_deg.toFixed(2) + "°";
+}
+</script>
+</head>
+<body>
+Oblicz wysokość i kąt startu samolotu
+<br><br>
+<form onsubmit="wysokosc(this.odl.value,this.s.value);kat(this.odl.value,this.s.value);return false">
+ odl = <input size="6" name="odl">
+ s = <input size="6" name="s">
+ <br><br>
+ <input type="submit" value="Oblicz">
+ <br><br>
+ Wysokość = <input size="6" name="wysokosc">
+ Kąt = <input size="6" name="kat">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
 </html>

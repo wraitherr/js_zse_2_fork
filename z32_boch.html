@@ -1,0 +1,40 @@
+<html> 
+     <head> 
+           <script type="text/javascript"> 
+           <style>
+            
+            
+            </style>
+              function klient(nazwisko_k,imie_k,zawod_k)
+  { 
+   this.nazwisko=nazwisko_k; 
+   this.imie=imie_k; 
+   this.zawod=zawod_k;   
+  }
+              klient.prototype.wypisz = function ()
+      { 
+         alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod); 
+      }; 
+  var osoba1 = new klient("Kowalski", "Jan", "kierowca");
+  var osoba2 = new klient('Nowak', 'Anna', 'sekretarka'); 
+  var osoba3 = new klient('Oleksandr', 'Sliusarenko', 'uczeń');
+  var osoba4 = new klient('Paweł', 'Washt', 'Czięzaroweć');
+  osoba1.wypisz();
+  osoba2.wypisz(); 
+  osoba3.wypisz();
+  osoba4.wypisz();
+                document.write("dostęp do właściwości:"+"<br>");
+
+
+     document.write("- klient pierwszy"+"   "+osoba1.nazwisko+"   "+osoba1.imie+"   "+osoba1.zawod+"<br>");
+     document.write("- klient drugi"+"   "+osoba2.nazwisko+"   "+osoba2.imie+"   "+osoba2.zawod+"<br>"); 
+     document.write("- klient trzeci"+"   "+osoba3.nazwisko+"   "+osoba3.imie+"   "+osoba3.zawod+"<br>");
+     document.write("- klient czwarty"+"   "+osoba4.nazwisko+"   "+osoba4.imie+"   "+osoba4.zawod+"<br>");
+            </script> 
+     </head> 
+<body> 
+ <br> <br>
+   programowanie obiektowe   
+</body> 
+
+</html> 
