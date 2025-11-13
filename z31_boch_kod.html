@@ -16,44 +16,46 @@
 
 <body>
   <textarea readonly>
-   <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obiekt Autobus</title>
+    <title>Obiekt Dom</title>
 </head>
 <body>
     <script>
        
-        function Autobus(_ilu_pasazerow, _marka, _kolor) {
-            this.ilu_pasazerow = _ilu_pasazerow;
-            this.marka = _marka;
+        function Dom(_ilu_dlugosc, _kolor, _styl) {
+            this.ilu_dlugosc = _ilu_dlugosc;
             this.kolor = _kolor;
+            this.styl = _styl;
 
          
-            this.Autobus_wyswietl_bochkovskyi = function() {
-                document.write(`Autobus marki ${this.marka} ma kolor ${this.kolor} i może przewozić ${this.ilu_pasazerow} pasażerów.`);
+            this.Dom_wyswietl_bochkovskyi = function() {
+                document.write(`Dom w stylu ${this.styl} ma kolor scian ${this.kolor} i ma dlugosc ${this.ilu_dlugosc} m.`);
             }
         }
 
        
-        let autobus1 = new Autobus(50, "Audi", "czerwony");
-        autobus1.Autobus_wyswietl_bochkovskyi();
+        let dom1 = new Dom(50, "Bialy", "High Tech");
+        dom1.dom_wyswietl_bochkovskyi();
 
        
-        autobus1.ocena = 4.8;
+        dom.ocena = 5.0;
 
      
-        autobus1.autobus_pokaz_bochkovskyi = function() {
-            document.write(`<br>Autobus jest oceniany na ${this.ocena} gwiazdek/gwiazdki.`);
+        dom1.dom_pokaz_bochkovskyi = function() {
+            document.write(`<br>Dom jest oceniany na ${this.ocena} gwiazdek/gwiazdki.`);
         }
 
    
-        autobus1.autobus_pokaz_bochkovskyi();
+        dom1.dom_pokaz_bochkovskyi();
     </script>
 </body>
 </html>
+
+
     
     </textarea>
 </body>
