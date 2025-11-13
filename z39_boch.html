@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #menu{
+                color:green;
+                border: 10px;
+            }
+            #red{
+                color:red;
+                border: 10px;
+            }
+            #cyan{
+                color:cyan;
+                border: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+<h1 id="menu">MENU</h1>
+<br><br>
+<h1 id="red">1-CZERWONY</h1>
+<h1 id="cyan">2-NIEBIESKI</h1>
+
+<input type="button" name="Bochkovskyi" value="Oblicz" onclick="fun_boc()" /> 
+<script> 
+    function fun_boc() { 
+      var x_boc = prompt("Podaj kolor", ""); 
+        if(x_boc == 1 || x_boc.toLowerCase() == "czerwony") { 
+  document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />'); } 
+        else if(x_boc == 2 || x_boc.toLowerCase() == "niebieski") { 
+  document.write('<h6 style="color:cyan;">wczytałeś kolor niebieski</h6><br />'); 
+  } 
+  } 
+ </script>
+    </body>
+</html>
