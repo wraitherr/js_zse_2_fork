@@ -7,33 +7,26 @@
 </head>
 <body>
     <script>
-       
         function Dom(_ilu_dlugosc, _kolor, _styl) {
             this.ilu_dlugosc = _ilu_dlugosc;
             this.kolor = _kolor;
             this.styl = _styl;
 
-         
-            this.Dom_wyswietl_bochkovskyi = function() {
-                document.write(`Dom w stylu ${this.styl} ma kolor scian ${this.kolor} i ma dlugosc ${this.ilu_dlugosc} m.`);
+            this.dom_wyswietl_bochkovskyi = function() {
+                document.write(`Dom w stylu ${this.styl} ma kolor ścian ${this.kolor} i ma długość ${this.ilu_dlugosc} m.`);
             }
         }
 
-       
-        let dom1 = new Dom(50, "Bialy", "High Tech");
+        let dom1 = new Dom(50, "Biały", "High Tech");
         dom1.dom_wyswietl_bochkovskyi();
 
-       
-        dom.ocena = 5.0;
+        dom1.ocena = 5.0;
 
-     
         dom1.dom_pokaz_bochkovskyi = function() {
             document.write(`<br>Dom jest oceniany na ${this.ocena} gwiazdek/gwiazdki.`);
         }
 
-   
         dom1.dom_pokaz_bochkovskyi();
     </script>
 </body>
 </html>
-
