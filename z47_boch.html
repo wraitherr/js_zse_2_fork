@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47 - boc</title>
+</head>
+<body>
+
+<h2>Zadanie 47 - Sprawdzanie boków trójkąta (do...while)</h2>
+
+<button onclick="sprawdzTrojkat()">Start — sprawdź trójkąt</button>
+
+<p id="wynik"></p>
+
+<script>
+function sprawdzTrojkat() {
+    let a_boc, b_boc, c_boc;
+
+    do {
+        a_boc = parseFloat(prompt("Podaj bok a:"));
+        b_boc = parseFloat(prompt("Podaj bok b:"));
+        c_boc = parseFloat(prompt("Podaj bok c:"));
+
+    } while (
+        isNaN(a_boc) || isNaN(b_boc) || isNaN(c_boc) ||
+        (a_boc <= 0) || (b_boc <= 0) || (c_boc <= 0) ||
+        (a_boc + b_boc <= c_boc) ||
+        (a_boc + c_boc <= b_boc) ||
+        (b_boc + c_boc <= a_boc)
+    );
+
+    document.getElementById("wynik").innerHTML =
+        "Boki: a=" + a_boc + ", b=" + b_boc + ", c=" + c_boc +
+        "<br> Z podanych boków można zbudować trójkąt.";
+}
+</script>
+
+</body>
+</html>
