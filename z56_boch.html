@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Liczby ze wzoru</title>
+    <style>
+        pre {
+            font-family: monospace;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Wartości w(i) = i² + i + 41</h2>
+<pre id="wynik_boc"></pre>
+
+<script>
+    const wynik_boc = document.getElementById("wynik_boc");
+
+    for (let i_boc = 0; i_boc < 40; i_boc++) {
+        let w_boc = i_boc * i_boc + i_boc + 41;
+        wynik_boc.textContent += `${w_boc}\n`;
+    }
+</script>
+
+</body>
+</html>
