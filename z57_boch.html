@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pierwiastki liczb</title>
+    <style>
+        pre {
+            font-family: monospace;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Obliczanie pierwiastków: </h2>
+
+<pre id="wynik_boc"></pre>
+
+<script>
+    const start_boc = 3;
+    const koniec_boc = start_boc + 15;
+
+    const wynik_boc = document.getElementById("wynik_boc");
+
+    for (let i_boc = start_boc; i_boc <= koniec_boc; i_boc++) {
+
+        let pierw2_boc = Math.sqrt(i_boc);
+        let pierw4_boc = Math.sqrt(pierw2_boc);
+
+        wynik_boc.textContent +=
+            `i: ${i_boc}   ` +
+            `pierwiastek st.2 = ${pierw2_boc.toFixed(2)}   ` +
+            `pierwiastek st.4 = ${pierw4_boc.toFixed(2)}\n`;
+    }
+</script>
+
+</body>
+</html>
