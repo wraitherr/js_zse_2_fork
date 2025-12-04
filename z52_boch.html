@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Prostokąt z gwiazdek</title>
+    <style>
+        pre {
+            font-size: 18px;
+            line-height: 1.2;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Bochkovskyi Artem 2P</h2>
+<pre id="wynik"></pre>
+
+<script>
+
+    const imie = "artem";
+    const nazw = "bochkovskyi";
+
+
+    const a_boc = (nazw.length % 4) + 5;  
+    const b_boc = (imie.length % 6) + 20;
+
+    let prostokat = "";
+
+
+    for (let i = 0; i < b_boc; i++) {
+        prostokat += "*";
+    }
+    prostokat += "\n";
+
+
+    for (let i = 0; i < a_boc - 2; i++) {
+        prostokat += "*"; 
+
+        for (let j = 0; j < b_boc - 2; j++) { 
+            prostokat += " ";
+        }
+
+        prostokat += "*\n";
+    }
+
+
+    for (let i = 0; i < b_boc; i++) {
+        prostokat += "*";
+    }
+
+
+    document.getElementById("wynik").textContent = prostokat;
+</script>
+
+</body>
+</html>
