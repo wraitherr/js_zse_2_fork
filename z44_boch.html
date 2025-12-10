@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z44_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z44 — Math.pow i Math constants</h1>
+<button onclick="run44()">Uruchom</button>
+<div id="wynik44" style="margin-top:12px"></div>
+<script>
+function run44(){
+  var x = parseFloat(prompt('Podaj podstawę',''));
+  if(x===null) return;
+  var y = parseFloat(prompt('Podaj wykładnik',''));
+  if(y===null) return;
+  var res = Math.pow(x,y);
+  document.getElementById('wynik44').innerHTML = x + '^' + y + ' = ' + res.toFixed(4) + '<br>Math.E=' + Math.E.toFixed(6) + ', Math.PI=' + Math.PI.toFixed(6);
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
