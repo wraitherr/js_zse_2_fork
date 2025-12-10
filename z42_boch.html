@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z42_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z42 — Suma dwóch liczb</h1>
+<button onclick="run42()">Wczytaj i oblicz</button>
+<div id="wynik42" style="margin-top:12px;color:green;font-size:18px"></div>
+<script>
+function run42(){
+  var l1 = prompt('liczba1=','');
+  if(l1===null) return;
+  var l2 = prompt('liczba2=','');
+  if(l2===null) return;
+  var a = parseFloat(l1);
+  var b = parseFloat(l2);
+  var suma = a + b;
+  document.getElementById('wynik42').innerHTML = 'suma=' + a + ' + ' + b + ' = ' + suma.toFixed(2);
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
