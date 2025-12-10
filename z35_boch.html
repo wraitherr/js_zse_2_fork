@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z35_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z35 — Zamiana kolorów</h1>
+<p>Kliknij, wpisz "zielony" albo "niebieski".</p>
+<button onclick="run35()">Uruchom</button>
+<div id="wynik35" style="margin-top:12px"></div>
+<script>
+function run35(){
+  var x = prompt('Wpisz kolor (zielony / niebieski):','');
+  if(x===null) return;
+  x = x.toLowerCase().trim();
+  var out = document.getElementById('wynik35');
+  if(x === 'zielony'){
+    out.innerHTML = '<span style="color:blue;font-size:20px;">Zamieniłem zielony na niebieski</span>';
+  } else if(x === 'niebieski'){
+    out.innerHTML = '<span style="color:green;font-size:20px;">Zamieniłem niebieski na zielony</span>';
+  } else {
+    out.innerHTML = '<span style="color:gray;">Nie rozpoznano koloru</span>';
+  }
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
