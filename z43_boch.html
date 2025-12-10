@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z43_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z43 — Pole trójkąta</h1>
+<p>Podstawa: <input id="a43" value="10"> Wysokość: <input id="h43" value="5"></p>
+<button onclick="calc43()">Oblicz pole</button>
+<div id="wynik43" style="margin-top:12px;color:navy;font-size:18px"></div>
+<script>
+function calc43(){
+  var a = parseFloat(document.getElementById('a43').value);
+  var h = parseFloat(document.getElementById('h43').value);
+  var pole = 0.5 * a * h;
+  document.getElementById('wynik43').innerHTML = 'Pole trójkąta = ' + pole.toFixed(2) + ' jednostek^2';
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
