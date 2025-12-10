@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z49_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z49 — Sekundy między dniami i godzinami</h1>
+<button onclick="run49()">Uruchom</button>
+<div id="wynik49" style="margin-top:12px"></div>
+<script>
+function run49(){
+  var D1 = parseInt(prompt('D1','30')); if(isNaN(D1)) return;
+  var G1 = parseInt(prompt('G1','4')); if(isNaN(G1)) return;
+  var D2 = parseInt(prompt('D2','28')); if(isNaN(D2)) return;
+  var G2 = parseInt(prompt('G2','22')); if(isNaN(G2)) return;
+  var secs = ((D1 - D2) * 24 + (G1 - G2)) * 3600;
+  document.getElementById('wynik49').innerHTML = 'Ilość sekund = ' + Math.abs(secs) + ' sekund';
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
