@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z40_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z40 — Sprawdź przedział</h1>
+<p>Przykładowy przedział (dla numeru 3): [-2,3)</p>
+<button onclick="run40()">Sprawdź liczbę</button>
+<div id="wynik40" style="margin-top:12px"></div>
+<script>
+function run40(){
+  var n = prompt('Podaj liczbę do sprawdzenia:','');
+  if(n===null) return;
+  var x = parseFloat(n);
+  var ok = (x >= -2) && (x < 3);
+  document.getElementById('wynik40').innerHTML = 'Liczba ' + x + (ok? ' należy ' : ' nie należy ') + 'do przedziału [-2,3).';
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
