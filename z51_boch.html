@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z51_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z51 — V i Pc walca</h1>
+<p>Podaj r i h, obliczenia z Math.PI</p>
+<p>r: <input id="r51" value="3"> h: <input id="h51" value="5"></p>
+<button onclick="run51()">Oblicz</button>
+<div id="wynik51" style="margin-top:12px"></div>
+<script>
+function run51(){
+  var r = parseFloat(document.getElementById('r51').value);
+  var h = parseFloat(document.getElementById('h51').value);
+  var V = Math.PI * r * r * h;
+  var Pc = 2*Math.PI*r*r + 2*Math.PI*r*h;
+  document.getElementById('wynik51').innerHTML = 'V=' + V.toFixed(2) + ' cm^3<br>Pc=' + Pc.toFixed(2) + ' cm^2';
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
