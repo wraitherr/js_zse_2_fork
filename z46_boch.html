@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z46_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z46 — Walidacja do...while</h1>
+<p>Program pyta dopóki wysokość i podstawa nie będą > 0.</p>
+<button onclick="run46()">Uruchom walidację</button>
+<div id="wynik46" style="margin-top:12px"></div>
+
+<script>
+function run46(){
+  var h_boc, a_boc;
+
+  do {
+    var liczba1_boc = prompt('Wprowadź wysokość (h>0):','');
+    if(liczba1_boc === null) return;
+    h_boc = parseFloat(liczba1_boc);
+  } while (h_boc <= 0);
+
+  do {
+    var liczba2_boc = prompt('Wprowadź podstawę (a>0):','');
+    if(liczba2_boc === null) return;
+    a_boc = parseFloat(liczba2_boc);
+  } while (!(a_boc > 0));
+
+  var pole_boc = 0.5 * a_boc * h_boc;
+
+  document.getElementById('wynik46').innerHTML =
+    'Wczytano h=' + h_boc +
+    ', a=' + a_boc +
+    '. Pole trójkąta = ' + pole_boc.toFixed(2);
+}
+</script>
+
+<p><a href="index.html">Powrót</a></p>
+</body></html>
