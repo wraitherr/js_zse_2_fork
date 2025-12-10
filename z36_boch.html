@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><title>Z36_boch</title>
+<style>body{font-family:Arial;padding:16px}</style></head><body>
+<h1>Zadanie Z36 — Okienko</h1>
+<p>Otwiera okienko z obrazkiem i przyciskiem zamknij.</p>
+<button onclick="openWin()">Otwórz okienko</button>
+<script>
+function openWin(){
+  var w = window.open('','okienko36','toolbar=no,menubar=no,width=360,height=240,top=200,left=200');
+  w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Okienko Z36</title></head><body>');
+  w.document.write('<p>NAZWISKO: Bochkovskyi Artem</p>');
+  w.document.write('<img src="https://via.placeholder.com/300x100?text=Z36" alt="obraz"><br>');
+  w.document.write('<button onclick="window.close()">Zamknij okno</button>');
+  w.document.write('</body></html>');
+}
+</script>
+<p><a href="index.html">Powrót</a></p>
+</body></html>
