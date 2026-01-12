@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 59 KOD - Bochkovskyi</TITLE>
+</head>
+<body>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;TITLE&gt;Zadanie 59 - Bochkovskyi&lt;/TITLE&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script language="JavaScript"&gt;
+var R_boch = parseFloat(prompt("Podaj promień koła R:", ""));
+var N_boch = 0;
+var R_int_boch = Math.floor(R_boch);
+for(i_boch = Math.floor(-R_boch-1); i_boch &lt;= Math.floor(R_boch+1); i_boch++)
+{
+for(j_boch = Math.floor(-R_boch-1); j_boch &lt;= Math.floor(R_boch+1); j_boch++)
+{
+if(i_boch*i_boch + j_boch*j_boch &lt;= R_boch*R_boch)
+{
+N_boch++;
+}
+}
+}
+document.write("Promień koła R = " + R_boch + "&lt;br&gt;");
+document.write("Liczba punktów kratowych N(R) = " + N_boch + "&lt;br&gt;");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 58 KOD - Bochkovskyi</TITLE>
+</head>
+<body>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;TITLE&gt;Zadanie 58 - Bochkovskyi&lt;/TITLE&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script language="JavaScript"&gt;
+var liczba1_boch = parseFloat(prompt("Podaj pierwszą liczbę:", ""));
+var liczba2_boch = parseFloat(prompt("Podaj drugą liczbę:", ""));
+if(liczba1_boch == liczba2_boch)
+{
+confirm("Liczby są równe. Brak obliczeń.");
+}
+else if(liczba1_boch &lt; liczba2_boch)
+{
+for(i_boch=liczba1_boch+1; i_boch&lt;liczba2_boch; i_boch++)
+{
+if(i_boch % 2 == 1)
+{
+document.write("&lt;font color=green&gt;" + i_boch + "&lt;/font&gt;&lt;br&gt;");
+}
+}
+}
+else
+{
+for(i_boch=liczba1_boch-1; i_boch&gt;liczba2_boch; i_boch--)
+{
+if(i_boch % 2 == 1)
+{
+document.write("&lt;font color=blue size=1&gt;" + i_boch + "&lt;/font&gt;&lt;br&gt;");
+}
+}
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</body>
+</html>
+

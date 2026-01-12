@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 58 - Bochkovskyi</TITLE>
+</head>
+<body>
+<script language="JavaScript">
+var liczba1_boch = parseFloat(prompt("Podaj pierwszą liczbę:", ""));
+var liczba2_boch = parseFloat(prompt("Podaj drugą liczbę:", ""));
+if(liczba1_boch == liczba2_boch)
+{
+confirm("Liczby są równe. Brak obliczeń.");
+}
+else if(liczba1_boch < liczba2_boch)
+{
+for(i_boch=liczba1_boch+1; i_boch<liczba2_boch; i_boch++)
+{
+if(i_boch % 2 == 1)
+{
+document.write("<font color=green>" + i_boch + "</font><br>");
+}
+}
+}
+else
+{
+for(i_boch=liczba1_boch-1; i_boch>liczba2_boch; i_boch--)
+{
+if(i_boch % 2 == 1)
+{
+document.write("<font color=blue size=1>" + i_boch + "</font><br>");
+}
+}
+}
+</script>
+</body>
+</html>
+
